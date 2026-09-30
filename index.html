@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b6b4f"><meta name="description" content="WASSCEPASSCO — WASSCE past questions, study resources and progress.">
+<link rel="manifest" href="manifest.json"><link rel="icon" href="assets/icons/icon-192.png"><link rel="stylesheet" href="style.css">
+<title>WASSCEPASSCO — WASSCE Study Hub</title>
+<!-- Add the exact AdSense code supplied by Google after approval. -->
+</head>
+<body>
+<div id="offline" class="offline">You are offline. Saved app features may still be available.</div>
+<header class="topbar"><a class="brand" href="#home"><span class="logo">W</span><b>WASSCE<span>PASSCO</span></b></a>
+<nav><a href="#home">Home</a><a href="#library">Past Questions</a><a href="#guides">Guides</a><a href="#progress">My Progress</a></nav>
+<div class="actions"><button id="installBtn" class="ghost small hidden">Install app</button><button id="themeBtn" class="icon">☾</button><button id="accountBtn" class="primary small">Sign in</button></div></header>
+<main>
+<section id="home" class="hero"><div><span class="eyebrow">WASSCE STUDY HUB</span><h1>Everything you need to <em>prepare better.</em></h1><p>Find past questions, reports, guides and practice resources in one organized place.</p><div class="hero-actions"><a class="primary" href="#library">Explore resources</a><button class="secondary" id="heroSignup">Create free account</button></div><div class="ticks">✓ Mobile friendly &nbsp; ✓ Organized library &nbsp; ✓ Student progress</div></div>
+<div class="hero-card"><span class="eyebrow">QUICK SEARCH</span><div class="search"><span>⌕</span><input id="heroSearch" placeholder="Search subject, year or paper"></div><div class="numbers"><div><b id="paperCount">0</b><small>Resources</small></div><div><b id="subjectCount">0</b><small>Subjects</small></div><div><b>24/7</b><small>Access</small></div></div></div></section>
+<div class="ad-slot">ADVERTISEMENT</div>
+<section id="library" class="section"><div class="section-head"><div><span class="eyebrow">RESOURCE LIBRARY</span><h2>Past questions & resources</h2></div><button id="refresh" class="secondary small">Refresh</button></div>
+<div class="filters"><input id="search" placeholder="Search resources"><select id="subject"><option value="">All subjects</option></select><select id="year"><option value="">All years</option></select><select id="paper"><option value="">All papers</option><option>Paper 1</option><option>Paper 2</option><option>Paper 3</option><option>Paper 1 & 2</option><option>General</option></select></div>
+<div id="resources" class="grid"><div class="loading">Loading library…</div></div></section>
+<section id="guides" class="section muted"><span class="eyebrow">STUDY TOOLS</span><h2>Study resources</h2><div class="features">
+<article><span>📘</span><h3>Examination Guides</h3><p>Clear preparation and exam-day guidance.</p></article><article><span>📝</span><h3>Chief Examiners' Reports</h3><p>Use documented examiner observations to improve.</p></article><article><span>🎯</span><h3>Mocks & Super Mocks</h3><p>Practice and measure your preparation.</p></article><article><span>📋</span><h3>Do's & Don'ts</h3><p>Quick exam-day reminders.</p></article></div></section>
+<section id="progress" class="section"><span class="eyebrow">MY DASHBOARD</span><h2>My progress</h2><div id="dashboard" class="dashboard"><div class="empty"><h3>Sign in to track your study</h3><p>Save resources and view your study activity.</p><button class="primary" id="progressLogin">Sign in</button></div></div></section>
+<section class="section about"><div><span class="eyebrow">ABOUT</span><h2>A focused companion for WASSCE preparation.</h2></div><p>WASSCEPASSCO is designed to organize exam resources for students on phones and computers. New resources are added through a protected admin dashboard, so adding a new PDF does not require redeploying the website.</p></section>
+</main>
+<footer><div><a class="brand" href="#home"><span class="logo">W</span><b>WASSCEPASSCO</b></a><p>Built for focused WASSCE preparation.</p></div><div class="links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="about.html">About</a><a href="mailto:abdulsammedtakiyudeen@gmail.com">Contact</a></div><small>© <span id="copyright"></span> WASSCEPASSCO</small></footer>
+
+<div id="auth" class="modal hidden"><div class="modal-box"><button class="close" id="closeAuth">×</button><div class="center"><span class="logo">W</span><h2 id="authTitle">Welcome back</h2><p id="authSub">Sign in to your account.</p></div><form id="authForm"><input id="email" type="email" placeholder="Email address" required><input id="password" type="password" minlength="6" placeholder="Password" required><button class="primary full" id="authSubmit">Sign in</button></form><button class="google full" id="google">G&nbsp; Continue with Google</button><button class="text" id="switch">Create an account</button><button class="text" id="reset">Forgot password?</button><p id="authMsg" class="msg"></p></div></div>
+
+<div id="admin" class="modal hidden"><div class="admin-box"><div class="admin-head"><div><span class="eyebrow">ADMIN CONTROL CENTER</span><h2>Manage resources</h2></div><button class="secondary small" id="closeAdmin">Close</button></div><div class="admin-grid"><form id="uploadForm" class="card"><h3>Publish a resource</h3><input id="file" type="file" accept=".pdf,.doc,.docx" required><input id="title" placeholder="Resource title" required><div class="two"><input id="subj" placeholder="Subject" required><input id="yr" type="number" placeholder="Year" required></div><select id="type"><option>Past Question</option><option>Marking Scheme</option><option>Chief Examiners' Report</option><option>Mock</option><option>Super Mock</option><option>Study Guide</option><option>Examination Guide</option><option>Do's & Don'ts</option></select><select id="pap"><option>Paper 1</option><option>Paper 2</option><option>Paper 3</option><option>Paper 1 & 2</option><option>General</option></select><textarea id="desc" placeholder="Short description"></textarea><button class="primary full">Upload & publish</button><p id="uploadMsg" class="msg"></p></form><div class="card"><h3>Published resources</h3><div id="adminList">Loading…</div></div></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script>
+</body></html>
